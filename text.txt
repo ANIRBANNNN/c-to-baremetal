@@ -1,0 +1,1 @@
+riscv64-unknown-elf-gcc -O0 --ggdb -nostdlib -march=rev32i -mabi=ilp32 -WL, Tm.ld m.s
