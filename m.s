@@ -1,2 +1,2 @@
 _start:
-    j_start
+    j _start
