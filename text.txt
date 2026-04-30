@@ -11,3 +11,5 @@ gdb-multiarch main.elf \
 riscv64-unknown-elf-objcopy -O binary main.elf main.bin
 
 xxd -e -c 4 -g 4 main.bin
+
+For GDB Dashboard https://github.com/cyrus-and/gdb-dashboard
