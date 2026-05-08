@@ -1,5 +1,7 @@
 int Anirban(){
-    float c1 = 123224567;
+    volatile int i = 10;
+    i = i+1;
+    i=i+10;
 
-    return 0;
+    return i;
 }

@@ -8,20 +8,17 @@
 	.globl	Anirban
 	.type	Anirban, @function
 Anirban:
-	addi	sp,sp,-32
-	sw	s0,28(sp)
-	addi	s0,sp,32
-	lui	a5,%hi(.LC0)
-	lw	a5,%lo(.LC0)(a5)
-	sw	a5,-20(s0)
-	li	a5,0
-	mv	a0,a5
-	lw	s0,28(sp)
-	addi	sp,sp,32
+	addi	sp,sp,-16
+	li	a5,10
+	sw	a5,12(sp)
+	lw	a5,12(sp)
+	addi	a5,a5,1
+	sw	a5,12(sp)
+	lw	a5,12(sp)
+	addi	a5,a5,10
+	sw	a5,12(sp)
+	lw	a0,12(sp)
+	addi	sp,sp,16
 	jr	ra
 	.size	Anirban, .-Anirban
-	.section	.rodata
-	.align	2
-.LC0:
-	.word	1290471487
 	.ident	"GCC: (13.2.0-11ubuntu1+12) 13.2.0"
