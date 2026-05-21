@@ -8,13 +8,28 @@
 	.globl	Anirban
 	.type	Anirban, @function
 Anirban:
-	addi	sp,sp,-16
-	sw	s0,12(sp)
-	addi	s0,sp,16
-	li	a5,3
-	mv	a0,a5
-	lw	s0,12(sp)
-	addi	sp,sp,16
+	addi	sp,sp,-32
+	sw	s0,28(sp)
+	addi	s0,sp,32
+	li	a5,10
+	sw	a5,-20(s0)
+	li	a5,2
+	sw	a5,-24(s0)
+	lw	a4,-20(s0)
+	li	a5,10
+	bne	a4,a5,.L2
+	lw	a5,-24(s0)
+	addi	a5,a5,200
+	sw	a5,-24(s0)
+	j	.L1
+.L2:
+	lw	a5,-24(s0)
+	addi	a5,a5,-100
+	sw	a5,-24(s0)
+	nop
+.L1:
+	lw	s0,28(sp)
+	addi	sp,sp,32
 	jr	ra
 	.size	Anirban, .-Anirban
 	.ident	"GCC: (13.2.0-11ubuntu1+12) 13.2.0"

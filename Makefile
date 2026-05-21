@@ -19,4 +19,4 @@ connectgdb:
 	gdb-multiarch main.elf -ex "target remote :1234" -ex "break _start" -ex "continue" -q
 
 clean:
-	rm *.out *.bin *.elf c-asm.s
+	rm -rf *.out *.bin *.elf c-asm.s
