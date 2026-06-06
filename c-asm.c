@@ -1,25 +1,9 @@
 void Anirban(){
-    int i = 3;
-    int j = 2;
-    switch (i)
-    {
-    case 1:
-        j=j+1;
-        
-    case 2:
-        j=j+2;
-        break;
-    case 3:
-        j=j+3;
-        break;
-    default:
-        j=j+100;
-    }
-    // if(i==10){
-    //     j = j+200;
-    // }
-    // else{
-    //     j = j-100;
-    // }
-    // return;
+    int i = 10;
+    goto label;
+    
+    i=i+2;
+
+    label:
+        i=i+21;
 }
